@@ -1,0 +1,189 @@
+
+
+.body {
+  padding: 20px 50px;
+  background-color: #f6f6f6;
+  height: 225px;
+
+  .body-text {
+    font-family: CircularStd;
+    font-size: 14px;
+    line-height: 2;
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+  .umweltrechner {
+    font-family: CircularStd;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.21;
+    color: #000;
+  }
+
+  .umweltrechner-sub-text {
+    font-family: CircularStd;
+    font-size: 18px;
+    color: #000;
+    margin-top: 12px;
+  }
+
+  .rectangle {
+    width: 335px;
+    height: 270px;
+    margin-top: 35px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+    .whle-deine-pendelro {
+      font-family: CircularStd;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 30px 20px 5px;
+      line-height: 1.2;
+      letter-spacing: normal;
+      color: #000;
+    }
+
+    .um-zu-sehen-wie-vie {
+      font-family: CircularStd;
+      margin-left: 20px;
+      font-size: 12px;
+      line-height: 1.33;
+      color: #666;
+    }
+
+    .mat-form-field {
+      display: block;
+    }
+
+    .searched-body {
+      border-radius: 8px;
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      text-align: center;
+
+      .cursor-pointer {
+        cursor: pointer;
+      }
+    }
+
+    .details {
+      width: 300px;
+      height: 44px;
+      margin: 10px 0 0;
+      border-radius: 4px;
+      border: 0;
+      background-color: #fc631e;
+      color: #fff;
+    }
+  }
+
+  .mask {
+    width: 541px;
+    height: 68px;
+    margin-top: 35px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+
+  .bus-bg {
+    position: relative;
+    left: 271px;
+    width: 270px;
+    height: 68px;
+    background: #fc631e;
+    border-radius: 0 8px 8px 0;
+    bottom: 70px;
+  }
+
+  .bus-bg::before {
+    content: "";
+    border-style: solid;
+    border-width: 0px 40px 68px 0px;
+    border-color: transparent #fc631e transparent transparent;
+    position: absolute;
+    top: 0px;
+    margin-left: -39px;
+  }
+
+  .bus-icon {
+    width: 40px;
+    height: 40px;
+    padding: 2px 4px 5px;
+    object-fit: contain;
+  }
+
+  .-km {
+    font-family: CircularStd;
+    font-size: 14px;
+    line-height: 1.29;
+    color: #fff;
+  }
+
+  .title {
+    width: 281px;
+    height: 24px;
+    margin: 35px 94px 25px 29px;
+    font-family: CircularStd;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #000;
+    margin-bottom: 25px;
+  }
+
+  .bg {
+    width: 160px;
+    height: 100px;
+    margin-left: 15px;
+    padding: 13px 65px 16px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+
+  .bg-orange {
+    width: 160px;
+    height: 100px;
+    margin-left: 15px;
+    padding: 13px 65px 16px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fc631e;
+    box-shadow: 0 2px 8px 0 #ffcdb6, 0 2px 8px 0 #ffe7dc;
+  }
+
+  .mask-icon {
+    width: 24px;
+    height: 24px;
+    margin: 0 6px 7px 0;
+    padding: 6px 4px 6px 5px;
+    background-color: #000;
+  }
+
+  .small-text {
+    font-family: CircularStd;
+    font-size: 12px;
+    line-height: 1.33;
+    color: #666;
+  }
+
+  .wie-entstehen-diese {
+    font-family: CircularStd;
+    font-size: 14px;
+    line-height: 1.29;
+    color: #fc631e;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .body {
+    .bg {
+      flex-wrap: wrap !important;
+    }
+  }
+}
