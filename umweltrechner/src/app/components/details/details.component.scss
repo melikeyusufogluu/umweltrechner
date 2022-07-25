@@ -1,5 +1,5 @@
 
-
+$orange: #fc631e;
 .body {
   padding: 20px 50px;
   background-color: #f6f6f6;
@@ -19,6 +19,13 @@
     font-weight: bold;
     line-height: 1.21;
     color: #000;
+  }
+
+  .umweltrechner-orange {
+    font-family: CircularStd;
+    font-size: 22px;
+    line-height: 1.09;
+    color: $orange;
   }
 
   .umweltrechner-sub-text {
@@ -75,7 +82,7 @@
       margin: 10px 0 0;
       border-radius: 4px;
       border: 0;
-      background-color: #fc631e;
+      background-color: $orange;
       color: #fff;
     }
   }
@@ -94,7 +101,7 @@
     left: 271px;
     width: 270px;
     height: 68px;
-    background: #fc631e;
+    background: $orange;
     border-radius: 0 8px 8px 0;
     bottom: 70px;
   }
@@ -103,7 +110,7 @@
     content: "";
     border-style: solid;
     border-width: 0px 40px 68px 0px;
-    border-color: transparent #fc631e transparent transparent;
+    border-color: transparent $orange transparent transparent;
     position: absolute;
     top: 0px;
     margin-left: -39px;
@@ -152,7 +159,7 @@
     padding: 13px 65px 16px 15px;
     border-radius: 8px;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
-    background-color: #fc631e;
+    background-color: $orange;
     box-shadow: 0 2px 8px 0 #ffcdb6, 0 2px 8px 0 #ffe7dc;
   }
 
@@ -175,15 +182,7 @@
     font-family: CircularStd;
     font-size: 14px;
     line-height: 1.29;
-    color: #fc631e;
+    color: $orange;
     cursor: pointer;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .body {
-    .bg {
-      flex-wrap: wrap !important;
-    }
   }
 }

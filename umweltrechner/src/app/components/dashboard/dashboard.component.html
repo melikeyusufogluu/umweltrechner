@@ -66,7 +66,7 @@
         <button class="details mx-2" (click)="goToDetails()">Weiter</button>
 
         <div *ngIf="filteredArray?.length > 0" class="searched-body">
-          <div *ngIf="originId" class="pt-3 pb-4">
+          <div *ngIf="originId && !destinationId" class="pt-3 pb-4">
             <img src="assets/images/currentlocation.png" alt="icons">
             Standort verwenden
           </div>

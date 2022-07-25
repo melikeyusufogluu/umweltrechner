@@ -13,69 +13,71 @@
   <div class="body-text">
     <span>Rundum mobil / Preis- und Umweltvergleich</span>
   </div>
-  <div class="umweltrechner">
-    <span>
-      Umweltrechner
-    </span>
-  </div>
-  <div class="umweltrechner-sub-text">
-    <span>
-      Pendeln an 210 Tagen mit Mittelklasse von Tamm bis Stadtmitte
-    </span>
-  </div>
-  <div class="mask mx-auto">
-    <div class="col-7 mx-auto">
-      <img src="assets/images/car-icon-2.png" class="bus-icon">
-      <p class="-km text-black text-lg-start">
-        24,8 km
-      </p>
+  <span class="umweltrechner">
+    Umweltrechner
+  </span>
+  <ng-container *ngFor="let item of data">
+    <div class="umweltrechner-sub-text">
+      <span>
+        Pendeln an <span class="umweltrechner-orange">{{item.duration}}</span> mit <span
+          class="umweltrechner-orange">{{item?.origin?.disassembledName}}</span> von <span
+          class="umweltrechner-orange">{{item?.destination?.disassembledName}}</span>
+      </span>
     </div>
-    <div class="bus-bg d-flex">
-      <div class="mx-auto">
-        <img src="assets/images/bus-icon.png" class="bus-icon">
-        <p class="-km">
-          24,8 km
+    <div class="mask mx-auto">
+      <div class="col-7 mx-auto">
+        <img src="assets/images/car-icon-2.png" class="bus-icon">
+        <p class="-km text-black text-lg-start">
+          {{item?.distance / 1000 + ' km'}}
         </p>
       </div>
-    </div>
-  </div>
-
-
-  <div class="d-flex justify-content-center mt-35">
-    <div class="ps-5">
-      <p class="title">
-        Auswirkungen auf die Umwelt
-      </p>
-      <div class="d-flex">
-        <div class="bg">
-          <img src="assets/images/car-icon.png">
-          <span class="-km text-black ms-1">{{autoCardName}}</span>
-          <div class="-km text-black font-weight-bold fs-20 mt-1">2.032 kg</div>
-          <div class="small-text pe-3">CO2 / Jahr </div>
-        </div>
-        <div class="bg-orange mb-1">
-          <img src="assets/images/vvs-logo.svg" class="vvs-logo">
-          <span class="-km text-black ms-1">Auto</span>
-          <div class="-km text-black font-weight-bold fs-20 mt-1">2.032 kg</div>
-          <div class="small-text pe-3">CO2 / Jahr </div>
+      <div class="bus-bg d-flex">
+        <div class="mx-auto">
+          <img src="assets/images/bus-icon.png" class="bus-icon">
+          <p class="-km">
+            {{item?.distance / 1000 + ' km'}}
+          </p>
         </div>
       </div>
-      <div class="col-10 text-end mx-2">
-        <a class="wie-entstehen-diese">
-          Wie entstehen diese Werte?
-        </a>
-      </div>
-
-
     </div>
-    <div>
-      <p class="title">
-        Kosteneinschätzung für ein Jahr
-      </p>
-      <div class="d-flex">
-        <div class="bg"></div>
-        <div class="bg-orange"></div>
+    <div class="d-flex justify-content-center mt-35">
+      <div class="ps-5">
+        <p class="title">
+          Auswirkungen auf die Umwelt
+        </p>
+        <div class="d-flex">
+          <div class="bg">
+            <img src="assets/images/car-icon.png">
+            <span class="-km text-black ms-1">{{item?.transportation?.product.name}}</span>
+            <div class="-km text-black font-weight-bold fs-20 mt-1">{{item?.transportation?.product.iconId + ' km'}}
+            </div>
+            <div class="small-text pe-3">CO2 / Jahr </div>
+          </div>
+          <div class="bg-orange mb-1">
+            <img src="assets/images/vvs-logo.svg" class="vvs-logo">
+            <span class="-km text-black ms-1">Auto</span>
+            <div class="-km text-black font-weight-bold fs-20 mt-1">{{item?.transportation?.product.iconId + ' km'}}
+            </div>
+            <div class="small-text pe-3">CO2 / Jahr </div>
+          </div>
+        </div>
+        <div class="col-10 text-end mx-2">
+          <a class="wie-entstehen-diese">
+            Wie entstehen diese Werte?
+          </a>
+        </div>
+
+      </div>
+      <div>
+        <p class="title">
+          Kosteneinschätzung für ein Jahr
+        </p>
+        <div class="d-flex">
+          <div class="bg"></div>
+          <div class="bg-orange"></div>
+        </div>
       </div>
     </div>
-  </div>
+  </ng-container>
+
 </div>

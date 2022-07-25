@@ -16,10 +16,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.eventSubscription = this.allServices.getDetails().subscribe(item => {
       if(item?.journeys?.length >= 1) {
-        item?.journeys.forEach((journey: any) => this.data?.push(journey.legs))
-        this.data = Array.prototype.concat.apply([], this.data);  // concat all legs array
-        this.data = this.data.filter((item: any) => item.transportation.product.name === 'Auto');
-        this.data.filter((item: any) => this.autoCardName = item.transportation.product.name)
+        item?.journeys?.filter((data: any) => this.data = data?.legs.filter((leg: any) => leg.transportation.product.name === 'Auto'));
       }
     });
   }
